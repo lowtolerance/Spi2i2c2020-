@@ -60,26 +60,6 @@
   License Information:  https://www.dcity.org/license-information/
 */
 
-
-
-// include files... some boards require different include files
-#ifdef ARDUINO_ARCH_AVR        // if using an arduino
-#include "Arduino.h"
-#include "../SMWire/SMWire.h"
-#elif ARDUINO_ARCH_SAM        // if using an arduino DUE
-#include "Arduino.h"
-#include "../SMWire/SMWire.h"
-#elif PARTICLE                 // if using a core, photon, or electron (by particle.io)
-#include "Particle.h"
-#elif defined(__MK20DX128__) || (__MK20DX256__) || (__MK20DX256__) || (__MK62FX512__) || (__MK66FX1M0__) // if using a teensy 3.0, 3.1, 3.2, 3.5, 3.6
-#include "Arduino.h"
-#include "../SMWire/SMWire.h"
-#else                          // if using something else then this may work
-#include "Arduino.h"
-#include "../SMWire/SMWire.h"
-#endif
-
-
 // _displayType options
 #define LCD_TYPE                     0 // if the display is an LCD using the PCA8574 outputting to the HD44780 lcd controller chip
 #define OLED_TYPE                    1 // if the display is a OLED using the US2066 oled controller chip

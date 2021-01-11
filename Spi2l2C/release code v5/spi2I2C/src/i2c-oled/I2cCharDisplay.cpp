@@ -60,23 +60,7 @@
   License Information:  https://www.dcity.org/license-information/
 */
 
-
-
-// include files... some boards require different include files
-#ifdef ARDUINO_ARCH_AVR        // if using an arduino
 #include "I2cCharDisplay.h"
-#define Wire1 Wire             // regular arduinos don't have a second i2c port, just redefine Wire1 to be Wire
-#elif ARDUINO_ARCH_SAM         // if using a arduino DUE
-#include "I2cCharDisplay.h"
-#elif PARTICLE                 // if using a core, photon, or electron (by particle.io)
-#include "I2cCharDisplay.h"
-#define Wire1 Wire             // doesn't have a second i2c port, just redefine Wire1 to be Wire
-#elif defined(__MK20DX128__) || (__MK20DX256__) || (__MK20DX256__) || (__MK62FX512__) || (__MK66FX1M0__) // if using a teensy 3.0, 3.1, 3.2, 3.5, 3.6
-#include "I2cCharDisplay.h"
-#else                          // if using something else then this may work
-#include "I2cCharDisplay.h"
-#define Wire1 Wire             // regular arduinos don't have a second i2c port, just redefine Wire1 to be Wire
-#endif
 
 
 // class constructors
