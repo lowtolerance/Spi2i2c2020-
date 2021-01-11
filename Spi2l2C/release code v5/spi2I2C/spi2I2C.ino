@@ -1,6 +1,7 @@
 #include "xeniumspi.h" // modded from ryan's source
 #include "xboxsmbus.h"
-#include "src/SMWire/SMWire.h"
+#include <Wiring.h>
+
 #include "src/i2c-oled/I2cCharDisplay.h" //modified oled library
 #include "config.h"
 
